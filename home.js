@@ -1,6 +1,4 @@
-import fetch from 'fetch';
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     
     function CreateNote(noteContents) {
         
@@ -99,12 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 AddNoteItem(noteID)
             }
         })
-        .catch(error => {
-            console.error(error)
+        .catch (error => {
+            console.error
         })
     }
-
-
 
     document.getElementById('new-note-button').addEventListener(
         'click', function (e) {
@@ -119,8 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('new-button-update').addEventListener(
         'click', function (e) {
                 const noteContents = document.getElementById('note-textarea').value
-                const noteID =
-                e.target.getAttribute('data-note-id')
+                const noteID = e.target.getAttribute('data-note-id')
 
                 if (noteID && !isNaN(noteID)) {
                     UpdateNote (noteID, noteContents)
